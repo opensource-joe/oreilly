@@ -2,11 +2,16 @@
 
 # Answers - https://github.com/AllenDowney/ThinkPython2/blob/master/code/grid.py
 
+# Exercise 3-1
+
+# def right_justify():
+#     print(' ' * 69 + 's')
+
+# right_justify()
+
 # Exercise 3-3: Write a function that creates a 2 x 2 grid
 
-print('+', ('-' + ' ') * 4 + '+')
-print(('|' + '         ') * 4)
-
-
+# print('+', ('-' + ' ') * 4)
+# print(('|' + '         ') * 4)
 
 # Exercise 3-4: Write a function that creates a 4 x 4 grid
