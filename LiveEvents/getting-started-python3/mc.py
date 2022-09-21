@@ -9,13 +9,22 @@ This is the docstring, you can write documentation in here.
 >>> m.predict('a')
 'b'
 '''
+import random
 
 class Markov:
     def __init__(self, txt):
-        self.table = None
+        self.table = get_table(txt)
         
     def predict(self, txt):
-        return 'b'
+        options = self.table.get(txt, {})
+        if not options:
+            raise KeyError(f'{txt} not found')
+        letters = []
+        for letter in options:
+            count = options[letter]
+            for i in range(count):
+                letters.append(letter)
+        return random.choice(letters)
 
 # make a function that will create transition table
 def get_table(txt):
