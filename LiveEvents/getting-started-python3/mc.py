@@ -39,12 +39,8 @@ def get_table(txt):
             dst = txt[i+1]
         except IndexError:
             break
-        if char in results:
-            char_dict = results[char]
-        else:
-            char_dict = {}
-        if dst not in char_dict:
-            char_dict[dst] = 0
+        char_dict = results.get(char, {})
+        char_dict.setdefault(dst, 0)
         char_dict[dst] += 1
         results[char] = char_dict
     return results
