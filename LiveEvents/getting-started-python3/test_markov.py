@@ -14,6 +14,10 @@ class TestMarkov(unittest.TestCase):
         result = mc.get_table('abacab')
         self.assertEqual(result, {'a': {'b': 2, 'c': 1}, 'b': {'a': 1}, 'c': {'a': 1}})
     
+    def test_get_table3(self):
+        result = mc.get_table('abc', size=2)
+        self.assertEqual(result, {'ab': {'c': 1}})
+    
     def test_predict(self):
         m = mc.Markov('xyz') # 1 - setup
         result = m.predict('x') # 2 - call unit

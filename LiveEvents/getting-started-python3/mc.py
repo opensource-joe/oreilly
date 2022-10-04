@@ -27,20 +27,20 @@ class Markov:
         return random.choice(letters)
 
 # make a function that will create transition table
-def get_table(txt):
+def get_table(txt, size=1): # change in code = !!!
     '''This is the get_table docstring
     >>> get_table('ab')
     {'a': {'b': 1}}  # nested dictionary where a is key for value of b:1
     '''
     results = {} # empty dictionary literal
     for i in range(len(txt)):
-        char = txt[i]
+        chars = txt[i:i+size] # !!!
         try:
-            dst = txt[i+1]
+            dst = txt[i+size] # !!!
         except IndexError:
             break
-        char_dict = results.get(char, {})
+        char_dict = results.get(chars, {}) # !!!
         char_dict.setdefault(dst, 0)
         char_dict[dst] += 1
-        results[char] = char_dict
+        results[chars] = char_dict # !!!
     return results

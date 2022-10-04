@@ -3,7 +3,7 @@ by Matt Harrison
 
 ## Session 1
 
-- Example: Use Markov chain to make a text prediction
+- Example: Use [Markov chain](https://en.wikipedia.org/wiki/Markov_chain) to make a text prediction
 
 - Run py script in terminal in interactive mode $ python3 -i script.py
 - Python looks for variable in four places - local namespace (inside function), enclosed namespace (nested function), global namespace, built-in namespace
@@ -19,3 +19,10 @@ by Matt Harrison
 - Over 400k external Python libraries, Python has standard libraries
 
 ## Session 2
+
+- python3 -m file.idle - look for directory of files looking for idle.qy and execute it
+- dir() - returns all properties and methods of the specified object, without the values. This function will return all the properties and methods, even built-in properties which are default for all object
+- Test Driven Development (TDD)
+- slice - can use index to get specific characters
+
+*left off - 32:14
